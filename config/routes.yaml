@@ -3,3 +3,41 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+# config/routes.yaml
+
+homepage:
+    path: /
+    controller: App\Controller\HomeController::accueil
+    #           Espace de nomm\Class::method   // Espace de nommage défini dans le ctrller
+
+test_service:
+    path: service
+    controller: App\Controller\HomeController::test
+
+admin:
+    path: admin
+    controller: App\Controller\AdminController::requete
+
+app_default:
+    path: /default
+    controller: App\Controller\DefaultController::index
+
+# Route("/lucky/number2/", name="lucky_number2")
+lucky_number2:
+    path: /lucky/number2/
+    controller: App\Controller\LuckyNumberController::numberAction
+
+# Blog avec placeholder
+blog:
+    path:     /blog/{_lang}/{year}/{title}
+    controller: App\Controller\BlogController::blogAction
+    requirements:
+        year: '\d{4}'
+        title: '^[a-zA-Z0-9-]+$'
+
+# ------------------------------------------------------------------
+# the "app_lucky_number" route name is not important yet
+app_lucky_number:
+    path: /lucky/number
+    controller: App\Controller\LuckyControllerVersionInit::number 

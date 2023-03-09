@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {% include "header.html.twig" %}
+    
+    <html>
+        <body>
+            <form method="post">
+                <label for="username">Nom</label>
+                <input type="text" name="username" id="username" placeholder="nom utilisateur">
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" id="password">
+                <button type="submit">Se connecter</button>
+            </form>
+        </body>
+    </html>
+    
+    {% include "footer.html.twig" %}
+{% endblock %}
