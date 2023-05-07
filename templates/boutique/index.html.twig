@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ma boutique{% endblock %}
+
+{% block body %}
+    {% for article in articles  %}
+    <div class="card">
+        <a href= "{{path('article',{'id': article.id}) }}">
+            <h1>{{article.title}}</h1>
+        </a>
+        
+    </div>
+    {% endfor %}
+
+{% endblock %}

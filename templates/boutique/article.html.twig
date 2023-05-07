@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ma boutique{% endblock %}
+
+{% block body %}
+
+    <h1>{{article.title}}</h1>
+    <p>{{article.content}}</p>
+    <p>{{article.nb_Like}}</p>
+    <p>{{article.created_at}}</p>
+
+{% endblock %}
